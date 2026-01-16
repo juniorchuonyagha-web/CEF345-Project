@@ -3,28 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CashPath - Expense Tracker</title>
+    <title>CashPath App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>CashPath</h1>
+       <img src="Logo.png" alt="CashPath Logo" class="logo-header">
+        <p id="welcome"></p>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
     </header>
 
-    <section id="form-section">
+    <section id="income-section">
+        <h2>Add Income</h2>
+        <input type="text" id="income-name" placeholder="Income name">
+        <input type="number" id="income-amount" placeholder="Amount">
+        <select id="income-category">
+            <option value="Salary">Salary</option>
+            <option value="Gift">Gift</option>
+            <option value="Other">Other</option>
+        </select>
+        <button id="add-income-btn">Add Income</button>
+
+        <h2>Income</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody id="income-table"></tbody>
+        </table>
+    </section>
+
+    <section id="expense-section">
+        <h2>Add Expense</h2>
         <input type="text" id="expense-name" placeholder="Expense name">
         <input type="number" id="expense-amount" placeholder="Amount">
         <select id="expense-category">
             <option value="Food">Food</option>
             <option value="Transport">Transport</option>
-            <option value="School">School</option>
             <option value="Other">Other</option>
         </select>
         <button id="add-btn">Add Expense</button>
-    </section>
 
-    <section id="list-section">
         <h2>Expenses</h2>
         <table>
             <thead>
@@ -32,16 +56,16 @@
                     <th>Name</th>
                     <th>Amount</th>
                     <th>Category</th>
-                                </tr>
+                </tr>
             </thead>
             <tbody id="expense-table"></tbody>
         </table>
     </section>
 
     <section id="total-section">
-        <h2>Total: <span id="total">0</span>FCFA</h2>
+        <h2>Balance: <span id="total">0</span> FCFA</h2>
     </section>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>

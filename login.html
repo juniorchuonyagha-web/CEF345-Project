@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashPath Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="Logo.png" alt="CashPath Logo" class="logo">
+
+        <h2 id="form-title">Login</h2>
+
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button id="loginBtn" onclick="login()">Login</button>
+        <button id="createBtn" onclick="createAccount()" style="display:none;">Create Account</button>
+
+        <p class="switch" onclick="showCreateForm()">Don't have an account? Create one</p>
+        <p class="switch" onclick="showLoginForm()" style="display:none;">Already have an account? Login</p>
+
+       
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
